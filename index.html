@@ -1,0 +1,432 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VALTOR — Black Market</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #050505;
+            color: white;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.92);
+            border-bottom: 1px solid #8b0000;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: #ff2020;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            text-shadow: 0 0 15px red;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: red;
+            text-shadow: 0 0 10px red;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background:
+                radial-gradient(circle, #500000 0%, #160000 25%, #050505 70%);
+        }
+
+        .hero h1 {
+            font-size: 100px;
+            letter-spacing: 20px;
+            color: #ff2020;
+            text-shadow: 0 0 15px red, 0 0 50px #8b0000;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            color: #aaa;
+            letter-spacing: 5px;
+            font-size: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 40px;
+            color: white;
+            text-decoration: none;
+            background: #8b0000;
+            border: 1px solid red;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: red;
+            box-shadow: 0 0 30px red;
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 110px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #ff2020;
+            font-size: 40px;
+            margin-bottom: 35px;
+            text-shadow: 0 0 15px red;
+        }
+
+        section p {
+            max-width: 850px;
+            margin: auto;
+            color: #bbb;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .ranks,
+        .departments,
+        .rules {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .card {
+            width: 260px;
+            padding: 25px;
+            background: #100000;
+            border: 1px solid #660000;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: red;
+            box-shadow: 0 0 25px #8b0000;
+        }
+
+        .card h3 {
+            color: #ff3030;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 15px;
+        }
+
+        .rules .card {
+            width: 300px;
+        }
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            color: #777;
+            border-top: 1px solid #550000;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+                letter-spacing: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">VALTOR</div>
+
+    <nav>
+        <a href="#about">О клане</a>
+        <a href="#ranks">Ранги</a>
+        <a href="#departments">Отделы</a>
+        <a href="#rules">Правила</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <div>
+
+        <h1>VALTOR</h1>
+
+        <p>BLACK MARKET ORGANIZATION</p>
+
+        <a class="button"
+        href="https://discord.gg/GM4t9fPXj"
+        target="_blank">
+
+        ВСТУПИТЬ В DISCORD
+
+        </a>
+
+    </div>
+
+</section>
+
+<section id="about">
+
+    <h2>О КЛАНЕ</h2>
+
+    <p>
+        VALTOR — это организация, основанная на силе, уважении и единстве.
+        Каждый участник является частью одной семьи.
+        Мы развиваем клан, проводим мероприятия и создаём собственную историю.
+    </p>
+
+</section>
+
+<section id="ranks">
+
+    <h2>ИЕРАРХИЯ VALTOR</h2>
+
+    <div class="ranks">
+
+        <div class="card">
+            <h3>Новичок</h3>
+            <p>0 очков</p>
+        </div>
+
+        <div class="card">
+            <h3>Уличный Боец</h3>
+            <p>20 очков</p>
+        </div>
+
+        <div class="card">
+            <h3>Смотрящий</h3>
+            <p>40 очков</p>
+        </div>
+
+        <div class="card">
+            <h3>Сборщик Долгов</h3>
+            <p>60 очков</p>
+        </div>
+
+        <div class="card">
+            <h3>Солдат VALTOR</h3>
+            <p>80 очков</p>
+        </div>
+
+        <div class="card">
+            <h3>Старший Солдат</h3>
+            <p>100 очков</p>
+        </div>
+
+        <div class="card">
+            <h3>Капореджиме</h3>
+            <p>130 очков</p>
+        </div>
+
+        <div class="card">
+            <h3>Консильери</h3>
+            <p>170 очков</p>
+        </div>
+
+        <div class="card">
+            <h3>Заместитель Дона</h3>
+            <p>220 очков</p>
+        </div>
+
+        <div class="card">
+            <h3>Дон VALTOR</h3>
+            <p>Глава организации</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="departments">
+
+    <h2>ОТДЕЛЫ VALTOR</h2>
+
+    <div class="departments">
+
+        <div class="card">
+
+            <h3>ОТДЕЛ «МЕЛЬНИК»</h3>
+
+            <p>
+                Главный коммерческий отдел организации.
+                Отвечает за работу кафе, казино,
+                обслуживание посетителей и внутренний порядок.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>ОХРАНА</h3>
+
+            <p>
+                Обеспечение безопасности объектов,
+                участников организации и мероприятий.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>ОПЕРАЦИОННЫЙ ОТДЕЛ</h3>
+
+            <p>
+                Организация мероприятий,
+                выполнение заданий и координация участников.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="melnik-rules">
+
+    <h2>ПРАВИЛА «МЕЛЬНИКА»</h2>
+
+    <div class="rules">
+
+        <div class="card">
+            <h3>1. УВАЖЕНИЕ</h3>
+            <p>
+                Уважайте руководство, сотрудников и посетителей.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>2. ДИСЦИПЛИНА</h3>
+            <p>
+                Соблюдайте приказы руководства и правила организации.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>3. ПОРЯДОК</h3>
+            <p>
+                Запрещено мешать работе заведения и провоцировать конфликты.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>4. РАБОТА</h3>
+            <p>
+                Каждый сотрудник должен выполнять свои обязанности.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>5. БЕЗОПАСНОСТЬ</h3>
+            <p>
+                При угрозе безопасности необходимо сообщить руководству или охране.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>6. ЗАПРЕТ НАРУШЕНИЙ</h3>
+            <p>
+                Запрещено использовать должность в личных целях.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="rules">
+
+    <h2>ОБЩИЕ ПРАВИЛА VALTOR</h2>
+
+    <div class="rules">
+
+        <div class="card">
+            <h3>УВАЖЕНИЕ</h3>
+            <p>
+                Уважайте всех участников организации.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>АКТИВНОСТЬ</h3>
+            <p>
+                Поддерживайте активность в клане и Discord.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>ДИСЦИПЛИНА</h3>
+            <p>
+                Соблюдайте решения руководства.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>ЕДИНСТВО</h3>
+            <p>
+                Поддерживайте членов VALTOR и работайте как единая команда.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    © 2026 VALTOR — BLACK MARKET ORGANIZATION
+
+</footer>
+
+</body>
+</html>
+```
+
